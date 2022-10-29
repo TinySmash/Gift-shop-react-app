@@ -28,7 +28,7 @@ const ProductInfo = ({ getProduct, products }) => {
             <li><h3 id='price'>{currentProduct?.price}$</h3></li>
         </ul>
         <div id='actionButtons'>
-            <button className='actionButton'>Buy Now !</button>
+            <button className='actionButton'>Buy</button>
             <button className='actionButton'>Add to cart</button>
         </div>
         <div id="description-container">

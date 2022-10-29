@@ -1,11 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Fasthand&display=swap');
+
 #Title{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family:Fasthand ;
     font-size: 90px;
-    color: white;
-    text-shadow: 3px 3px 0px black,
-    -3px -3px 0px black;
+    color: rgba(201, 193, 193, 0.918);
+    text-shadow: black 5px 5px 3px;
     margin-left: 10%;
     float: left;
+    line-height: 115px;
 }
 
 #profile-area{
@@ -38,7 +40,7 @@
     margin-left: 10%;
     margin-right: auto;
     padding-right: 5px;
-    margin-top: 270px;
+    margin-top: 300px;
 }
 
 #menu3 , #menu2{
