@@ -1,0 +1,52 @@
+#card{
+    display:flex ;
+    position: static;
+    width: 170px;
+    height: 250px;
+    border: 1px solid black;
+    margin-right: 7px;
+    margin-top: 20px;
+    float: left;
+    border-radius: 5px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+#card:hover{
+    animation: cardOnHover;
+    animation-duration: 1s;
+    width: 177px;
+    height: 257px;
+    
+}
+
+@keyframes cardOnHover{
+    0%{width: 170px;height: 250px;}
+    100%{width: 175px;height: 257px;}
+}
+
+
+#mainShop{
+    margin-left: 0;
+    display: flexbox;
+    flex-wrap: wrap;
+    float: left;
+}
+
+
+#img-container{
+    border: 1px solid gray;
+    border-radius: 4px;
+    width: 90%;
+    height: 70%;
+    margin-top: 7px;
+    position: relative;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
