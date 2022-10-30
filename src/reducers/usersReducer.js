@@ -10,13 +10,7 @@ const initialState = {
 export default function(state = initialState, action){
     switch(action.type){
         case 'GET_USER':
-            switch(state.user.isLoggedIn){
-                case false :
-                    return null
-                case true :
-                    return state.user
-            }
-            
+            initialState.user = action.payload;
         default: 
             return state
     }

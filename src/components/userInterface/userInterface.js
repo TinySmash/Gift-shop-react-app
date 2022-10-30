@@ -1,6 +1,8 @@
 import React from 'react'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router';
+import { getUser } from '../../actions/userActions';
+import { connect } from 'react-redux';
 
 import './userInterface.css';
 
@@ -10,8 +12,7 @@ function UserInterface() {
     isLoggedIn : false,
     userName : '',
     email : '',
-    password : '',
-    alertMsg : ''
+    password : ''
   })
 
   const navigate = useNavigate();
@@ -62,6 +63,8 @@ function UserInterface() {
     let emailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/ ;
 
     if(userInfo.userName.match(namePattern) && userInfo.email.match(emailPattern) && userInfo.password.length >= 8){
+      setUserInfo({isLoggedIn : true});
+      getUser(userInfo);
       navigate("/");
 
       
@@ -70,9 +73,9 @@ function UserInterface() {
     }
     
   }
-
   
-
+  
+  
   return (
     <div id='user-div'>
         <form id='user-form'>
@@ -94,7 +97,7 @@ function UserInterface() {
               </li>
             </ul>
 
-            <h4 id='alert-msg' >{userInfo.alertMsg}</h4>
+            <h4 id='alert-msg' ></h4>
 
 
             
@@ -104,6 +107,14 @@ function UserInterface() {
         </form>
     </div>
   )
+
+
 }
 
-export default UserInterface ;
+const mapStateToProps = (state) => {
+  return {
+    myUser : state?.usersReducer?.user
+  }
+}
+
+export default connect(mapStateToProps, {getUser})(UserInterface) ;
