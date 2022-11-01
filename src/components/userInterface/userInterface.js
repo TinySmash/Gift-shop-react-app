@@ -16,6 +16,7 @@ function UserInterface(props) {
   })
 
   const navigate = useNavigate();
+  let alertMsg =  '';
 
 
 
@@ -62,14 +63,14 @@ function UserInterface(props) {
     let namePattern = /[A-Za-z0-9]{3,16}./ ;
     let emailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/ ;
 
-    if(userInfo.userName.match(namePattern) && userInfo.email.match(emailPattern) && userInfo.password.length >= 8){
+    if(userInfo.userName?.match(namePattern) && userInfo.email?.match(emailPattern) && userInfo.password.length >= 8){
       setUserInfo(userInfo.isLoggedIn = true);
       props.getUser(userInfo);
       navigate("/");
 
       
     }else{
-      setUserInfo({alertMsg : 'username or email are invalid'});
+      document.querySelector('#alert-msg').innerText = 'username, email or password are invalid';
     }
     
   }

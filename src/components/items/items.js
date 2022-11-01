@@ -22,6 +22,7 @@ class Items extends Component {
         
         
         const { products } = this.props;
+
         
         return (
             <ul id='mainShop'>

@@ -10,6 +10,13 @@
     line-height: 115px;
 }
 
+#welcome-user{
+    float: right;
+    position: absolute;
+    right: 8px;
+    top: 9px;
+}
+
 #profile-area{
     float: right;
     position: fixed;

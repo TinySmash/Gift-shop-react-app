@@ -4,3 +4,10 @@ export const getUser = (user) => {
         payload : user,
     }
 }
+
+export const checkUser = () => {
+    return {
+        type : 'CHECK_USER',
+        payload : null
+    }
+}
