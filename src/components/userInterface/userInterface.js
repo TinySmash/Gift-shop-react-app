@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 
 import './userInterface.css';
 
-function UserInterface() {
+function UserInterface(props) {
 
   const [userInfo, setUserInfo] = useState({
     isLoggedIn : false,
@@ -63,8 +63,8 @@ function UserInterface() {
     let emailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/ ;
 
     if(userInfo.userName.match(namePattern) && userInfo.email.match(emailPattern) && userInfo.password.length >= 8){
-      setUserInfo({isLoggedIn : true});
-      getUser(userInfo);
+      setUserInfo(userInfo.isLoggedIn = true);
+      props.getUser(userInfo);
       navigate("/");
 
       
@@ -113,7 +113,7 @@ function UserInterface() {
 
 const mapStateToProps = (state) => {
   return {
-    myUser : state?.usersReducer?.user
+    myUser : state?.usersReducer
   }
 }
 
