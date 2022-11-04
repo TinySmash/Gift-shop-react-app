@@ -37,9 +37,9 @@ function Main(props){
                     <div id='menu-btn-burger'></div>
                 </div>
                 <ul>
-                    <li className='menu' id='menu1'><a className='anchor-menu'>Home</a></li>
-                    <li className='menu' id='menu2'><a className='anchor-menu'>About</a></li>
-                    <li className='menu' id='menu3'><a className='anchor-menu'>Offers</a></li>
+                    <li className='menu' id='menu1'><a className='anchor-menu'>Profile</a></li>
+                    <li className='menu' id='menu2'><a className='anchor-menu'>Cart</a></li>
+                    <li className='menu' id='menu3'><a className='anchor-menu'>Support</a></li>
                 </ul>
                 <form>
                     <input />
