@@ -66,9 +66,6 @@ function UserInterface(props) {
     if(userInfo.userName?.match(namePattern) && userInfo.email?.match(emailPattern) && userInfo.password.length >= 8){
       setUserInfo(userInfo.isLoggedIn = true);
       props.getUser(userInfo);
-      localStorage.setItem('name',userInfo?.userName );
-      localStorage.setItem('email',userInfo?.email );
-      localStorage.setItem('password',userInfo?.password );
       navigate("/");
 
       
@@ -97,7 +94,7 @@ function UserInterface(props) {
                 <input type="text" className="user-input" placeholder='Create a password' onChange={(e) => getInputToState(e, "password")}/>
               </li>
               <li className="form-input">
-                <a><button className='action-form' id='submit-button' onClick={onSubmit}>Sign in</button></a>
+                <a><button className='action-form' id='submit-button' onClick={onSubmit}>Submit</button></a>
               </li>
             </ul>
 

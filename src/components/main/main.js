@@ -8,23 +8,14 @@ import './main.css';
 function Main(props){
 
     const [ userState, setUserState ] = useState({});
-    localStorage.setItem('userLoggedIn',false);
 
     useEffect(() => {
         
-        // Create a local storage object to store and manipulate use data
-        if(localStorage.userLoggedIn == false){
-            localStorage.setItem('name','');
-            localStorage.setItem('email','');
-            localStorage.setItem('password','');
-        }else{
-            console.log(localStorage.name,localStorage.email,localStorage.password)
-        }
-        props.checkUser();
-        setUserState(props.user);
+        props.checkUser()
+        setUserState(props.user)
     }, [])
     
-
+    console.log(userState);
 
     return ( 
         <div>
@@ -39,9 +30,9 @@ function Main(props){
                     <div id='menu-btn-burger'></div>
                 </div>
                 <ul>
-                    <li className='menu' id='menu1'><a className='anchor-menu' {...(userState?.user?.isLoggedIn ? {href : '/profile'} : {href : '/user-form'})} >Profile</a></li>
-                    <li className='menu' id='menu2'><a className='anchor-menu'>Cart</a></li>
-                    <li className='menu' id='menu3'><a className='anchor-menu'>History</a></li>
+                    <li className='menu' id='menu1'><a className='anchor-menu'>Home</a></li>
+                    <li className='menu' id='menu2'><a className='anchor-menu'>About</a></li>
+                    <li className='menu' id='menu3'><a className='anchor-menu'>Offers</a></li>
                 </ul>
                 <form>
                     <input />
