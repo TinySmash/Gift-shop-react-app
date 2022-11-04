@@ -8,7 +8,10 @@ import ProductInfo from './components/productInfo/productInfo';
 import UserInterface from './components/userInterface/userInterface';
 
 
+
 function App() {
+
+  
   return (
     <Provider store={store}>
       <Router className="App">
@@ -17,7 +20,7 @@ function App() {
         <Routes>
           <Route exact path='/' element={
             <div>
-              <Main/>
+              <Main />
               <Items/>
             </div>
           }></Route>
@@ -29,5 +32,8 @@ function App() {
     </Provider>
   );
 }
+
+
+
 
 export default App;

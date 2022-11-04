@@ -1,26 +1,33 @@
 import React, { Component } from 'react';
+import './main.css';
 import { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { checkUser } from '../../actions/userActions';
-import './main.css';
 
 
 function Main(props){
 
-    const [ userState, setUserState ] = useState({});
-
-    useEffect(() => {
-        
-        props.checkUser()
-        setUserState(props.user)
-    }, [])
+    const [ userState, setUserState ] = useState();
+    const { checkUser } = props;
     
-    console.log(userState);
+    
+
+    
+    
+    useEffect(() => {
+        checkUser();
+        setUserState(props.user.user)
+        
+    },[])
+    
+    
+    //setUserState(user);
+    console.log(userState)
 
     return ( 
         <div>
             <h1 id='Title'>Your favorite<br></br>Gifts shop</h1>
-            {userState.user?.isLoggedIn ? <h2 id='welcome-user'>Welcome {userState.user.userName}</h2> : 
+            {userState?.isLoggedIn ? <h2 id='welcome-user'>Welcome {userState.userName}</h2> : 
             <a id="profile-area" href='/user-form'>
                 <img src="user.png" alt="profile" id="profile-img" />
             </a>
