@@ -6,6 +6,7 @@ import store from './store';
 import Items from './components/items/items';
 import ProductInfo from './components/productInfo/productInfo';
 import UserInterface from './components/userInterface/userInterface';
+import Profile from './components/profile/profile';
 
 
 
@@ -19,7 +20,8 @@ function App() {
 
         <Routes>
           <Route exact path='/' element={
-            <div>
+            <div id='Homepage'>
+              <Profile />
               <Main />
               <Items/>
             </div>

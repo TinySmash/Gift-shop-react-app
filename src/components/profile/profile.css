@@ -1,0 +1,26 @@
+#welcome-user{
+    float: right;
+    position: absolute;
+    right: 8px;
+    top: 9px;
+}
+
+#profile-area{
+    float: right;
+    position: fixed;
+    right: 8px;
+    top: 9px;
+    width: 50px;
+    height: 50px;
+    border: 1px solid rgb(63, 63, 63);
+    border-radius: 50px;
+    background-color: rgb(63, 63, 63);
+    cursor: pointer;
+}
+
+#profile-img{
+    width: 40px;
+    height: 40px;
+    margin-left:5px;
+    margin-top: 2px;
+}
