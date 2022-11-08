@@ -3,6 +3,7 @@ import Card from '../card/card';
 import './items.css';
 import { getProducts } from '../../actions/productActions';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 
 
@@ -30,14 +31,14 @@ class Items extends Component {
                 {products.map(e => {
                     
                     return (
-                        <a href={'/product-info/'+e.id}>
+                        <Link to={'/product-info/'+e.id}>
                             <Card 
                             key={e.id} 
                             productPic={e.picture}
                             price={e.price}
                             name={e.name}
                             />
-                        </a>
+                        </Link>
                     )
                 })}
 
