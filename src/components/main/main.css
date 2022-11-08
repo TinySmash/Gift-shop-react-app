@@ -53,7 +53,7 @@ ul{
 form{
     padding: 0 0;
     border: 1px dotted black;
-    background-color: rgb(201, 201, 201);
+    background-color: transparent;
     border-radius: 10px;
     margin-left: 47%;
     width: 51%;
@@ -67,7 +67,7 @@ input{
     border: none;
     border-radius: 7px;
     float: left;
-    background-color: rgb(201, 201, 201);
+    background-color: transparent;
 }
 
 #search{
@@ -75,7 +75,7 @@ input{
     height: 93%;
     width: 20%;
     font-size: 12px;
-    background-color: rgb(201, 201, 201);
+    background-color: transparent;
     transform: translateY(-25px);
     border: none;
     border-radius: 10px;
