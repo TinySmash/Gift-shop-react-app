@@ -94,7 +94,7 @@ function UserInterface(props) {
                 <input type="text" className="user-input" placeholder='Create a password' onChange={(e) => getInputToState(e, "password")}/>
               </li>
               <li className="form-input">
-                <a><button className='action-form' id='submit-button' onClick={onSubmit}>Submit</button></a>
+                <a><button className='action-form' id='submit-button' onClick={onSubmit}>Sign in</button></a>
               </li>
             </ul>
 
