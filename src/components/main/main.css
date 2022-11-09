@@ -50,7 +50,7 @@ ul{
     align-items: flex-start;
     justify-content: space-between;
 }
-form{
+#mainForm{
     padding: 0 0;
     border: 1px dotted black;
     background-color: transparent;

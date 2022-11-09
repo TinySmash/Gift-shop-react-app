@@ -4,7 +4,7 @@ import './main.css';
 
 
 
-function Main(props){
+function Main(){
 
 
 
@@ -22,8 +22,8 @@ function Main(props){
                     <li className='menu' id='menu2'><Link className='anchor-menu'>Cart</Link></li>
                     <li className='menu' id='menu3'><Link className='anchor-menu'>Support</Link></li>
                 </ul>
-                <form>
-                    <input />
+                <form id='mainForm'>
+                    <input id='mainInput'/>
                     <button id='search'>search</button>
                 </form>
             </nav>
