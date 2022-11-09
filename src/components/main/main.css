@@ -84,7 +84,7 @@ input{
     cursor: pointer;
 }
 
-#menu-btn{
+.menu-btn{
     position: relative;
     display: flex;
     justify-content: center;
@@ -95,20 +95,20 @@ input{
     border-radius: 2px;
     margin-top: 3px;
     margin-left: 20px;
+    cursor: pointer;
 }
 
-#menu-btn-burger{
+.menu-btn-burger{
     position: absolute;
     width: 26px;
     height: 2px;
     border: 1px black solid;
     border-radius: 5px;
     background-color: black;
-    cursor: pointer;
 }
 
-#menu-btn-burger::before,
-#menu-btn-burger::after{
+.menu-btn-burger::before,
+.menu-btn-burger::after{
     content: '';
     position: absolute;
     width: 26px;
@@ -116,17 +116,34 @@ input{
     border: 1px black solid;
     border-radius: 5px;
     background-color: black;
+    transition: all .5s ease-in-out;
 }
 
-#menu-btn-burger::before{
+.menu-btn-burger::before{
     transform: translate(-1px, -9px);
 }
 
-#menu-btn-burger::after{
+.menu-btn-burger::after{
     transform: translate(-1px, 7px);
 }
 
+/* BURGER ANIMATION */
 
+.menu-btn.open .menu-btn-burger{
+    transform: translateX(-50px);
+    background: transparent;
+    border: none;
+    box-shadow: none;
+
+}
+
+.menu-btn.open .menu-btn-burger::before{
+    transform: rotate(45deg) translate(35px, -35px);
+}
+
+.menu-btn.open .menu-btn-burger::after{
+    transform: rotate(-45deg) translate(35px, 35px);
+}
 
 
 @media all and (max-width : 684px){
@@ -136,7 +153,7 @@ input{
     #Title{
         font-size: 80px;
     }
-    form{
+    #mainForm{
         transform: translateY(-46px);
         margin-left: 23%;
         width: 71%;
@@ -148,7 +165,7 @@ input{
     #Title{
         font-size: 70px;
     }
-    form{
+    #mainForm{
         transform: translateY(-46px);
         margin-left: 23%;
         width: 71%;
@@ -159,7 +176,7 @@ input{
     #Title{
         font-size: 60px;
     }
-    form{
+    #mainForm{
         transform: translateY(-46px);
         margin-left: 23%;
         width: 71%;
@@ -167,7 +184,7 @@ input{
 }
 
 @media all and (min-width : 685px){
-    #menu-btn{
+    .menu-btn{
         display: none;
     }
 }

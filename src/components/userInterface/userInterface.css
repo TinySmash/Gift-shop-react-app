@@ -2,8 +2,9 @@
     width: 400px;
     height: 600px;
     border: 2px solid black;
+    border-radius: 8px;
     margin: 0 auto;
-    margin-top: 65px;
+    margin-top: 25px;
     justify-content: center;
     background-color: rgb(236, 236, 236);
 }
