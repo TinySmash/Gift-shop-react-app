@@ -11,10 +11,15 @@ function Main(){
     const menuToggle = (element) => {
         element.preventDefault();
         let menuButton = document.querySelector('.menu-btn');
+        let responsiveMenu = document.querySelector('.toggle-menu');
+
         if(!menuOpened){
             menuButton.classList.add('open');
+            responsiveMenu?.classList.add('opened');
+
         }else if(menuOpened){
             menuButton.classList.remove('open');
+            responsiveMenu?.classList.remove('opened');
         }
         menuOpened = !menuOpened ;
     }
@@ -32,10 +37,21 @@ function Main(){
                 <div className='menu-btn' onClick={menuToggle}>
                     <div className='menu-btn-burger'></div>
                 </div>
+                <ul className='toggle-menu'>
+                    <li className="toggle-menu-items">
+                        <Link className='toggle-menu-anchors' to='/profile'>Profile</Link>
+                    </li>
+                    <li className="toggle-menu-items">
+                        <Link className='toggle-menu-anchors' to='/cart'>Cart</Link>
+                    </li>
+                    <li className="toggle-menu-items">
+                        <Link className='toggle-menu-anchors' to='/support'>Support</Link>
+                    </li>
+                </ul>
                 <ul>
-                    <li className='menu' id='menu1'><Link className='anchor-menu'>Profile</Link></li>
-                    <li className='menu' id='menu2'><Link className='anchor-menu'>Cart</Link></li>
-                    <li className='menu' id='menu3'><Link className='anchor-menu'>Support</Link></li>
+                    <li className='menu' id='menu1'><Link className='anchor-menu' to='/profile'>Profile</Link></li>
+                    <li className='menu' id='menu2'><Link className='anchor-menu' to='/cart'>Cart</Link></li>
+                    <li className='menu' id='menu3'><Link className='anchor-menu' to='/support'>Support</Link></li>
                 </ul>
                 <form id='mainForm'>
                     <input id='mainInput'/>
