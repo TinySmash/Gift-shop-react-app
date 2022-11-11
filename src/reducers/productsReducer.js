@@ -64,7 +64,7 @@ export default  function(state = intialState, action){
                 product : state.products.filter(e => e.id == action.payload)
             }
         case 'GET_PRODUCT_TO_CART':
-            state.cartProducts.push(state.products(action?.payload - 1))
+            state.cartProducts.push(action.payload)
         case 'GET_CART_PRODUCTS':
             return {
                 ...state,

@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 import { useNavigate } from 'react-router';
 
 
-const ProductInfo = ({ getProduct, products }, props) => {
+const ProductInfo = ({ getProduct, getProductToCart, products }) => {
     const { id } = useParams();
     const navigate = useNavigate();      
     useEffect(() => {
@@ -19,7 +19,7 @@ const ProductInfo = ({ getProduct, products }, props) => {
 
     const addToCart = (e) => {
       e.preventDefault();
-      getProductToCart(currentProduct?.id);
+      getProductToCart(currentProduct);
       navigate("/")
     }
 

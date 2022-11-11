@@ -14,10 +14,10 @@ export const getProduct = (id) => {
 
 }
 
-export const getProductToCart = (id) => {
+export const getProductToCart = (product) => {
     return{
         type : 'GET_PRODUCT_TO_CART',
-        payload : id
+        payload : product
     }
 }
 
