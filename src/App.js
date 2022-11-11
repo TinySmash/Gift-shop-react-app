@@ -7,6 +7,7 @@ import Items from './components/items/items';
 import ProductInfo from './components/productInfo/productInfo';
 import UserInterface from './components/userInterface/userInterface';
 import Profile from './components/profile/profile';
+import Cart from './components/cart/cart';
 
 
 
@@ -28,6 +29,7 @@ function App() {
           }></Route>
           <Route exact path='/product-info/:id' element={<ProductInfo/>}></Route>
           <Route exact path='/user-form' element={<UserInterface/>}></Route>
+          <Route exact path='/cart' element={<Cart/>}></Route>
         </Routes>
         
       </Router>

@@ -13,3 +13,17 @@ export const getProduct = (id) => {
     }
 
 }
+
+export const getProductToCart = (id) => {
+    return{
+        type : 'GET_PRODUCT_TO_CART',
+        payload : id
+    }
+}
+
+export const getCartProducts = () => {
+    return {
+        type : 'GET_CART_PRODUCTS',
+        payload : null
+    }
+}

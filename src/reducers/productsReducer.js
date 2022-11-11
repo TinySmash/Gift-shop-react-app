@@ -50,6 +50,9 @@ const intialState = {
             picture : img7,
             price : 39.99
         }
+    ],
+    cartProducts : [
+    
     ]
 };
 
@@ -59,6 +62,13 @@ export default  function(state = intialState, action){
             return {
                 ...state,
                 product : state.products.filter(e => e.id == action.payload)
+            }
+        case 'GET_PRODUCT_TO_CART':
+            state.cartProducts.push(state.products(action?.payload - 1))
+        case 'GET_CART_PRODUCTS':
+            return {
+                ...state,
+                cartProducts : state?.cartProducts
             }
         default :
             return state;

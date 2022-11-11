@@ -1,8 +1,25 @@
 import './cart.css';
 import React, { Component } from 'react'
+import { connect } from 'react-redux';
+import {getCartProducts} from '../../actions/productActions'
 
-export default class Cart extends Component {
+class Cart extends Component {
+
+  state = {
+
+  }
+
+  componentDidMount(){
+    this.props.getCartProducts();
+  }
+
+  
   render() {
+    
+    console.log(this.props);
+    
+
+
     return (
       <div>
         
@@ -10,3 +27,9 @@ export default class Cart extends Component {
     )
   }
 }
+
+const mapCartToProps = (state) => ({
+  cartProducts : state?.myProduct?.cartProducts
+});
+
+export default connect(mapCartToProps, {getCartProducts})(Cart);
