@@ -43,6 +43,9 @@ class Cart extends Component {
                 <img src={e?.picture} alt="img" id='cart-img'/>
                 <h1 className="cart-info">{e?.name}</h1>
                 <h1 className="cart-info">{e?.price}$</h1>
+                <button className="cart-action-btn" id='buy-cart-product'>Buy</button>
+                <br />
+                <button className="cart-action-btn" id='remove-from-cart'>Remove</button>
               </div>
             )
           })}
