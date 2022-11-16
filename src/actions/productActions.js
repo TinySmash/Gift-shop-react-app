@@ -27,3 +27,10 @@ export const getCartProducts = () => {
         payload : null
     }
 }
+
+export const updateCart = (state) => {
+    return {
+        type : 'UPDATE_CART',
+        payload : state
+    }
+}

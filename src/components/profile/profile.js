@@ -19,7 +19,6 @@ class Profile extends Component {
     componentDidMount(){
         checkUser()
         const currentUser = this.props.user.user;
-        console.log(currentUser);
         this.setState({
             user : currentUser
         })

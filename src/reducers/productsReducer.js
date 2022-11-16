@@ -70,6 +70,8 @@ export default  function(state = intialState, action){
                 ...state,
                 cartProducts : state?.cartProducts
             }
+        case 'UPDATE_CART':
+            state.cartProducts = action.payload
         default :
             return state;
     }
