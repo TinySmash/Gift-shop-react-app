@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+
+#user-profile
+{
+    margin: 0;
+    padding: 0;
+    font-family:Poppins, sans-serif ;
+    justify-content: center;
+    align-items: center;
+}
+
+#no-logged{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 80%;
+    height: 600px;
+}
+
+#not-logged-title{
+    position: absolute;
+    width: 100%;
+    top: 30%;
+    left: 50%;
+    transform: translate(-47%,-50%);
+    font-size: 250%;
+}
+
+#signin-nav
+{
+    border: 1px solid rgb(255, 95, 140);
+    border-radius: 25px;
+    padding: 9px;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%,-50%);
+    background-color: rgb(255, 95, 140);
+}
+
+#prfl
+{
+    position: absolute;
+    width: 80%;
+    height: 580px;
+    border: 1px solid black;
+    border-radius: 7px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    flex-wrap: wrap;
+}
+
+#profile-picture
+{
+    padding: 5px;
+    display: flex;
+    width: 80px;
+    height: 80px;
+    border: 2px solid #252525;
+    border-radius: 50px;
+    background-color: #252525;
+    margin-top: 40px;
+
+}
+
+#user-info{
+    color: black;
+}
+
+.logout
+{
+    width: 40%;
+    height: 50px;
+    background-color: #770000;
+    border: none;
+    font-size: 22px;
+    color: white;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width : 716px) {
+    #user-info{
+        font-size: 13px;
+        margin-top: -10px;
+    }
+}

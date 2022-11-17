@@ -39,7 +39,7 @@ function Main(){
                 </div>
                 <ul className='toggle-menu'>
                     <li className="toggle-menu-items">
-                        <Link className='toggle-menu-anchors' to='/profile'>Profile</Link>
+                        <Link className='toggle-menu-anchors' to='/user-profile'>Profile</Link>
                     </li>
                     <li className="toggle-menu-items">
                         <Link className='toggle-menu-anchors' to='/cart'>Cart</Link>
@@ -49,7 +49,7 @@ function Main(){
                     </li>
                 </ul>
                 <ul>
-                    <li className='menu' id='menu1'><Link className='anchor-menu' to='/profile'>Profile</Link></li>
+                    <li className='menu' id='menu1'><Link className='anchor-menu' to='/user-profile'>Profile</Link></li>
                     <li className='menu' id='menu2'><Link className='anchor-menu' to='/cart'>Cart</Link></li>
                     <li className='menu' id='menu3'><Link className='anchor-menu' to='/support'>Support</Link></li>
                 </ul>

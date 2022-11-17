@@ -16,6 +16,7 @@
     border-radius: 50px;
     background-color: rgb(63, 63, 63);
     cursor: pointer;
+    z-index: 999;
 }
 
 #profile-img{
