@@ -35,21 +35,18 @@ function UserInterface(props) {
         setUserInfo(userInfo.userName = e.target.value);
         const newUserInfo = userInfo; // create new state object
         setUserInfo(newUserInfo);
-        console.log(userInfo);
         break
       }
       case 'email' : {
         setUserInfo(userInfo.email = e.target.value);
         const newUserInfo = userInfo; // create new state object
         setUserInfo(newUserInfo);
-        console.log(userInfo);
         break
       }
       case 'password' : {
         setUserInfo(userInfo.password = e.target.value) ;
         const newUserInfo = userInfo; // create new state object
         setUserInfo(newUserInfo);
-        console.log(userInfo);
         break
       }
       default:

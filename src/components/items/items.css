@@ -1,17 +1,18 @@
 #card{
     display:flex ;
-    position: static;
+    position: relative;
     width: 170px;
     height: 250px;
-    border: 1px solid black;
-    margin-right: 7px;
+    /*margin-right: 7px;*/
     margin-top: 20px;
     float: left;
     border-radius: 5px;
     justify-content: center;
     flex-wrap: wrap;
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;*/
     cursor: pointer;
+    background-color: rgba(39, 39, 39, 0.9) ;
+    
 }
 
 #card:hover{
@@ -29,10 +30,13 @@
 
 
 #mainShop{
+    width:100%;
     margin-left: 0;
-    display: flexbox;
-    flex-wrap: wrap;
+    display: flex;
     float: left;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-left:-40px;
 }
 
 
@@ -42,10 +46,12 @@
     height: 70%;
     margin-top: 7px;
     position: relative;
+    border: 1px solid rgba(80, 80, 80, 0.7);
+    background-color: rgba(80, 80, 80, 0.7);
 }
 
 a{
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
