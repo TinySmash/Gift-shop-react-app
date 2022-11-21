@@ -40,7 +40,7 @@ class UserProfile extends Component {
             <h1>e-mail : <span>{user.email}</span></h1>
             <h1>password : ******</h1>
           </div>
-          <Link to="/" className="logout" onClick={this.logout}>Log out</Link>
+          <Link to="/" className="logout" onClick={logout}>Log out</Link>
         </div>
         : <div id='no-logged'>
             <h1 id='not-logged-title'>You are not logged in !</h1>
