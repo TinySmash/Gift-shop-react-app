@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { checkUser } from '../../actions/userActions';
+import { checkUser, getUser } from '../../actions/userActions';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import'./userProfile.css'
@@ -11,13 +11,24 @@ class UserProfile extends Component {
   }
 
   
+
+  
   
   render() {
-    
-    const { checkUser } = this.props;
-    const { user } = this.props.user;
 
-    console.log(user);
+    function logout(){
+      this.props.getUser(logoutUser);
+    }
+    
+    const { checkUser, getUser } = this.props;
+    const { user } = this.props.user;
+    const logoutUser = {
+      isLoggedIn : false,
+      userName : '',
+      email : '',
+      password : ''
+    };
+
 
     return (
       <div id='user-profile'>
@@ -29,7 +40,7 @@ class UserProfile extends Component {
             <h1>e-mail : <span>{user.email}</span></h1>
             <h1>password : ******</h1>
           </div>
-          <button className="logout">Log out</button>
+          <Link to="/" className="logout" onClick={this.logout}>Log out</Link>
         </div>
         : <div id='no-logged'>
             <h1 id='not-logged-title'>You are not logged in !</h1>
@@ -45,4 +56,4 @@ const mapUserStateToProps = (state) => ({
 })
 
 
-export default connect(mapUserStateToProps, {checkUser})(UserProfile);
+export default connect(mapUserStateToProps, {checkUser, getUser})(UserProfile);

@@ -31,12 +31,12 @@
 
 #mainShop{
     width:100%;
-    margin-left: 0;
     display: flex;
     float: left;
     justify-content: space-around;
     flex-wrap: wrap;
     margin-left:-40px;
+    margin-bottom: 100px;
 }
 
 

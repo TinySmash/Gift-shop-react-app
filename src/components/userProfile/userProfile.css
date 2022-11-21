@@ -30,14 +30,14 @@
 
 #signin-nav
 {
-    border: 1px solid rgb(255, 95, 140);
+    border: 1px solid rgb(68, 68, 68);
     border-radius: 25px;
     padding: 9px;
     position: absolute;
     top: 50%;
     left: 30%;
     transform: translate(-50%,-50%);
-    background-color: rgb(255, 95, 140);
+    background-color: rgb(68, 68, 68);
 }
 
 #prfl
@@ -84,6 +84,8 @@
     font-size: 22px;
     color: white;
     cursor: pointer;
+    padding-left: 13%;
+    padding-top: 10px;
 }
 
 

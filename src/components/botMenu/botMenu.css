@@ -1,0 +1,32 @@
+.bot-menu
+{
+    width: 100%;
+    height: auto;
+    border: 1px solid #252525;
+    position: relative;
+    bottom: 0;
+    overflow: hidden;
+    background-color: #252525;
+}
+
+ul, li
+{
+    list-style-type: none;
+}
+
+.bot-menu-item
+{
+    float: left;
+    margin-left: 10%;
+}
+
+.bot-menu-header
+{
+    font-size: 28px;
+}
+
+
+.bot-menu-header, .bot-menu-option{
+    color: rgb(224, 224, 224);
+}
+

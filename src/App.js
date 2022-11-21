@@ -9,6 +9,7 @@ import UserInterface from './components/userInterface/userInterface';
 import Profile from './components/profile/profile';
 import Cart from './components/cart/cart';
 import UserProfile from './components/userProfile/userProfile';
+import BotMenu from './components/botMenu/botMenu';
 
 
 
@@ -26,15 +27,22 @@ function App() {
               <Profile />
               <Main />
               <Items/>
+              <BotMenu/>
             </div>
           }></Route>
-          <Route exact path='/product-info/:id' element={<ProductInfo/>}></Route>
+          <Route exact path='/product-info/:id' element={
+            <div>
+              <ProductInfo/>
+              <BotMenu/>
+            </div>
+          }></Route>
           <Route exact path='/user-form' element={<UserInterface/>}></Route>
           <Route exact path='/cart' element={<Cart/>}></Route>
           <Route exact path='/user-profile' element={<UserProfile/>}></Route>
         </Routes>
-        
       </Router>
+        
+        
     </Provider>
   );
 }
